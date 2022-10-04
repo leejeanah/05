@@ -5,23 +5,28 @@
 
 int main(int argc, char *argv[]) {
 	
-	int x,y;
-	char op;
-	int result;
+	int answer = 59;
+	int x;
+	int trial = 0; 
 	
-	printf("enter the calculation : ");
-	scanf("%d %c %d", &x, &op, &y);
+	do
+	{
+		printf("guess a number: ");
+		scanf("%d", &x);
+	    {
+	    	if(x > 59)
+		     printf("high!\n");
+		    else if(x < 59)
+		     printf("low!\n");
+		    else if(x == 59)
+		     printf("congratulation!\n");
+		 } 
+		trial = trial + 1;
+	}
+	while (x != 59);
+	 
 	
-	if(op == '+')
-	 result = x + y;
-	else if(op == '-')
-	 result = x - y;
-	else if(op == '*')
-	 result = x * y;
-	else if(op == '/')
-	 result = x / y;
-	
-	printf("= %i\n", result);
+    printf("number of trial = %i\n", trial);
 	
 	return 0;
 }
